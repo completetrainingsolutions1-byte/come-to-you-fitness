@@ -1,16 +1,481 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="At-Home Personal Trainer Lake Mary | Mobile Personal Training Heathrow FL | Come To You Fitness"
+  description="Professional in-home personal training in Lake Mary, Heathrow, and Longwood FL. Certified mobile fitness coaches bring custom workouts to your door. Results guaranteed or your money back."
+  keywords="at-home personal trainer Lake Mary, mobile personal training Heathrow FL, in-home fitness coach Longwood, personal training near Lake Mary FL, fitness trainer comes to you Longwood FL"
+>
+  <Navigation />
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Professional Personal Training — Delivered to Your Door</h1>
+        <p class="hero-subtitle">Expert fitness coaching, custom programming, and lasting results — all from the comfort of your own home in Lake Mary, Heathrow, Longwood, and Sanford, FL.</p>
+        <div class="hero-buttons">
+          <a href="tel:407-706-2272" class="btn btn-primary">Call 407-706-2272</a>
+          <a href="#consultation" class="btn btn-outline">Free Consultation</a>
+        </div>
+        <p class="guarantee-badge">✓ Results Guaranteed or Your Money Back</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose">
+    <div class="container">
+      <h2>Why Come To You Fitness?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🏋️</div>
+          <h3>20+ Years of Expertise</h3>
+          <p>Led by Allen Linville, our nationally certified trainers specialize in sports performance, strength training, rehabilitation, and corrective exercise.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🏠</div>
+          <h3>Training at Your Doorstep</h3>
+          <p>No gym hassle. No commute. We bring professional equipment and expert coaching directly to your home.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📋</div>
+          <h3>5-Step Success System</h3>
+          <p>Our proven "5 Steps to Achieving Your Health and Fitness Goals" program ensures sustainable, measurable results.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💪</div>
+          <h3>Customized Programs</h3>
+          <p>Every session is tailored to your goals, fitness level, and any movement limitations — evolving as you progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview">
+    <div class="container">
+      <h2>Specialized Training Programs</h2>
+      <p class="section-intro">Whether you're building strength, losing weight, or recovering from injury, we have a program designed for you.</p>
+
+      <div class="services-grid">
+        <a href="/services/strength-training" class="service-card">
+          <h3>Strength Training</h3>
+          <p>Build muscle, increase power, and improve overall strength with progressive resistance programs.</p>
+        </a>
+
+        <a href="/services/weight-loss" class="service-card">
+          <h3>Weight Loss & Fat Loss</h3>
+          <p>Sustainable fat-burn training and body transformation programs that deliver real results.</p>
+        </a>
+
+        <a href="/services/functional-training" class="service-card">
+          <h3>Functional & Athletic Training</h3>
+          <p>Enhance mobility, performance, and conditioning for sports and everyday life.</p>
+        </a>
+
+        <a href="/services/busy-professionals" class="service-card">
+          <h3>For Busy Professionals</h3>
+          <p>Efficient 30-45 minute sessions that fit your schedule — before work, during lunch, or after hours.</p>
+        </a>
+
+        <a href="/services/parents" class="service-card">
+          <h3>For Parents</h3>
+          <p>Stay fit while your kids are home. No childcare needed when your workout comes to you.</p>
+        </a>
+
+        <a href="/services/over-35" class="service-card">
+          <h3>For Over-35s & Mature Adults</h3>
+          <p>Age-appropriate training focused on mobility, strength, and vitality for long-term health.</p>
+        </a>
+
+        <a href="/services/post-rehab" class="service-card">
+          <h3>Post-Rehab & Injury Prevention</h3>
+          <p>Safe, effective training for clients recovering from injury or managing chronic pain.</p>
+        </a>
+
+        <a href="/services/coaching" class="service-card">
+          <h3>Coaching & Accountability</h3>
+          <p>Ongoing support, progress tracking, and motivation to keep you on track toward your goals.</p>
+        </a>
+      </div>
+
+      <div class="cta-center">
+        <a href="/services" class="btn btn-secondary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>Our 5-Step Process</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Consultation</h3>
+          <p>We discuss your goals, challenges, and fitness history in a no-pressure conversation.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Assessment</h3>
+          <p>Comprehensive movement evaluation identifies strengths, limitations, and areas of focus.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Custom Program Design</h3>
+          <p>Your personalized training plan is built around your specific goals and current fitness level.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Guided Training</h3>
+          <p>30-45 minute sessions that challenge you safely and efficiently, with expert coaching every step.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Progress & Adaptation</h3>
+          <p>Your program evolves as your body adapts, ensuring continuous improvement and results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="service-areas">
+    <div class="container">
+      <h2>Serving Central Florida</h2>
+      <p class="section-intro">Proudly bringing professional in-home personal training to these communities:</p>
+
+      <div class="locations-grid">
+        <a href="/locations/lake-mary" class="location-card">
+          <h3>Lake Mary Personal Training</h3>
+          <p>Mobile personal training and in-home fitness coaching for Lake Mary residents.</p>
+        </a>
+
+        <a href="/locations/heathrow" class="location-card">
+          <h3>Heathrow Personal Training</h3>
+          <p>At-home strength training and conditioning programs in Heathrow, FL.</p>
+        </a>
+
+        <a href="/locations/longwood" class="location-card">
+          <h3>Longwood Personal Training</h3>
+          <p>In-home fitness coaching and functional training for Longwood clients.</p>
+        </a>
+      </div>
+
+      <p class="also-serving">Also serving Sanford and surrounding areas</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="consultation">
+    <div class="container">
+      <h2>Ready to Transform Your Fitness?</h2>
+      <p>Start with a free consultation and movement assessment. No pressure, no obligation — just expert guidance.</p>
+      <div class="cta-buttons">
+        <a href="tel:407-706-2272" class="btn btn-primary btn-large">Call 407-706-2272</a>
+        <a href="mailto:support@cometoyoufitness.com" class="btn btn-outline btn-large">Email Us</a>
+      </div>
+      <p class="guarantee-text">✓ Results Guaranteed or Your Money Back</p>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #37ca37 0%, #2db92d 100%);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .guarantee-badge {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-orange);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    display: inline-block;
+  }
+
+  /* Why Choose Section */
+  .why-choose {
+    padding: 4rem 0;
+    background-color: #f7fafc;
+  }
+
+  .why-choose h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  /* Services Overview */
+  .services-overview {
+    padding: 4rem 0;
+  }
+
+  .services-overview h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+    background-color: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--dark-gray);
+  }
+
+  .service-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(55, 202, 55, 0.2);
+  }
+
+  .service-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-center {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* How It Works */
+  .how-it-works {
+    padding: 4rem 0;
+    background-color: #f7fafc;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+  }
+
+  .step h3 {
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Service Areas */
+  .service-areas {
+    padding: 4rem 0;
+  }
+
+  .service-areas h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .location-card {
+    padding: 2rem;
+    background-color: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--dark-gray);
+  }
+
+  .location-card:hover {
+    border-color: var(--primary-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(246, 173, 85, 0.2);
+  }
+
+  .location-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .also-serving {
+    text-align: center;
+    color: var(--medium-gray);
+    font-style: italic;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .guarantee-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-orange);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .services-grid,
+    .locations-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

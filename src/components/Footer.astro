@@ -1,0 +1,128 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Come To You Fitness</h3>
+        <p>Professional in-home personal training delivered to your door in Lake Mary, Heathrow, Longwood, and Sanford, FL.</p>
+        <p class="guarantee"><strong>Results Guaranteed or Your Money Back</strong></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/strength-training">Strength Training</a></li>
+          <li><a href="/services/weight-loss">Weight Loss & Fat Loss</a></li>
+          <li><a href="/services/functional-training">Functional Training</a></li>
+          <li><a href="/services/post-rehab">Post-Rehab Training</a></li>
+          <li><a href="/services">View All Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/locations/lake-mary">Lake Mary Personal Training</a></li>
+          <li><a href="/locations/heathrow">Heathrow Personal Training</a></li>
+          <li><a href="/locations/longwood">Longwood Personal Training</a></li>
+          <li>Sanford, FL</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul class="contact-info">
+          <li>
+            <strong>Phone:</strong><br />
+            <a href="tel:407-706-2272">407-706-2272</a>
+          </li>
+          <li>
+            <strong>Email:</strong><br />
+            <a href="mailto:support@cometoyoufitness.com">support@cometoyoufitness.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Come To You Fitness. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .footer-section h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .footer-section p {
+    color: var(--light-gray);
+    line-height: 1.8;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section a {
+    color: var(--light-gray);
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: var(--primary-green);
+  }
+
+  .guarantee {
+    color: var(--primary-orange);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .contact-info li {
+    margin-bottom: 1rem;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--medium-gray);
+    padding-top: 1.5rem;
+    text-align: center;
+    color: var(--light-gray);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
