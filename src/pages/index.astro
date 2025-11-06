@@ -14,14 +14,19 @@ import Footer from '../components/Footer.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
-        <h1>Professional Personal Training — Delivered to Your Door</h1>
-        <p class="hero-subtitle">Expert fitness coaching, custom programming, and lasting results — all from the comfort of your own home in Lake Mary, Heathrow, Longwood, and Sanford, FL.</p>
-        <div class="hero-buttons">
-          <a href="tel:407-706-2272" class="btn btn-primary">Call 407-706-2272</a>
-          <a href="#consultation" class="btn btn-outline">Free Consultation</a>
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <h1>Professional Personal Training — Delivered to Your Door</h1>
+          <p class="hero-subtitle">Expert fitness coaching, custom programming, and lasting results — all from the comfort of your own home in Lake Mary, Heathrow, Longwood, and Sanford, FL.</p>
+          <div class="hero-buttons">
+            <a href="tel:407-706-2272" class="btn btn-primary">Call 407-706-2272</a>
+            <a href="#consultation" class="btn btn-outline">Start Your Transformation</a>
+          </div>
+          <p class="guarantee-badge">✓ Results Guaranteed or Your Money Back</p>
         </div>
-        <p class="guarantee-badge">✓ Results Guaranteed or Your Money Back</p>
+        <div class="hero-image">
+          <img src="/hero-image.png" alt="Come To You Fitness Personal Training" />
+        </div>
       </div>
     </div>
   </section>
@@ -75,6 +80,11 @@ import Footer from '../components/Footer.astro';
         <a href="/services/functional-training" class="service-card">
           <h3>Functional & Athletic Training</h3>
           <p>Enhance mobility, performance, and conditioning for sports and everyday life.</p>
+        </a>
+
+        <a href="/services/nutrition" class="service-card">
+          <h3>Nutrition Coaching</h3>
+          <p>Personalized meal plans, macro coaching, and accountability to fuel your results and optimize your health.</p>
         </a>
 
         <a href="/services/busy-professionals" class="service-card">
@@ -195,8 +205,18 @@ import Footer from '../components/Footer.astro';
   .hero {
     background: linear-gradient(135deg, #37ca37 0%, #2db92d 100%);
     color: var(--white);
-    padding: 5rem 0;
-    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: left;
   }
 
   .hero h1 {
@@ -208,16 +228,13 @@ import Footer from '../components/Footer.astro';
   .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.8;
   }
 
   .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
   }
@@ -225,11 +242,24 @@ import Footer from '../components/Footer.astro';
   .guarantee-badge {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-orange);
+    color: var(--white);
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
     display: inline-block;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 
   /* Why Choose Section */
@@ -451,6 +481,15 @@ import Footer from '../components/Footer.astro';
 
   /* Responsive */
   @media (max-width: 768px) {
+    .hero-wrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
     .hero h1 {
       font-size: 2rem;
     }
@@ -462,11 +501,20 @@ import Footer from '../components/Footer.astro';
     .hero-buttons {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .hero-buttons .btn {
       width: 100%;
       max-width: 300px;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-image img {
+      max-width: 90%;
     }
 
     .services-grid,

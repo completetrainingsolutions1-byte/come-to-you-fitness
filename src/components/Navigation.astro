@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
   <div class="container">
     <div class="nav-wrapper">
       <a href="/" class="logo">
-        <span class="logo-text">Come To You Fitness</span>
+        <img src="/logo.png" alt="Come To You Fitness" class="logo-img" />
       </a>
 
       <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
@@ -25,6 +25,7 @@ const currentPath = Astro.url.pathname;
             <li><a href="/services/strength-training">Strength Training</a></li>
             <li><a href="/services/weight-loss">Weight Loss & Fat Loss</a></li>
             <li><a href="/services/functional-training">Functional & Athletic Training</a></li>
+            <li><a href="/services/nutrition">Nutrition Coaching</a></li>
             <li><a href="/services/busy-professionals">For Busy Professionals</a></li>
             <li><a href="/services/parents">For Parents</a></li>
             <li><a href="/services/over-35">For Over-35s & Mature Adults</a></li>
@@ -65,18 +66,20 @@ const currentPath = Astro.url.pathname;
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-green);
+    display: flex;
+    align-items: center;
     text-decoration: none;
   }
 
-  .logo:hover {
-    color: var(--primary-green);
+  .logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
   }
 
-  .logo-text {
-    display: inline-block;
+  .logo:hover .logo-img {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
   }
 
   .mobile-menu-toggle {
@@ -166,6 +169,10 @@ const currentPath = Astro.url.pathname;
   }
 
   @media (max-width: 968px) {
+    .logo-img {
+      height: 50px;
+    }
+
     .mobile-menu-toggle {
       display: flex;
     }
